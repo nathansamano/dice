@@ -1,0 +1,39 @@
+<!-- Program to choose a random student from one class of several
+
+	Brian Capouch
+	4 February 2015
+
+-->
+
+  <!-- Use jQuery from a CDN -->                      
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <title>Roll the Dice</title>
+</head>
+<body>
+    <h3>Roll the Dice</h3>
+    <div></div>
+    <input type="button" onclick="chooseOne(4 )" value="D4" />
+    <input type="button" onclick="chooseOne(6 )" value="D6" />
+    <input type="button" onClick="chooseOne(8 )" value="D8" />
+    <input type="button" onclick="chooseOne(10)" value="D10"/>
+    <input type="button" onclick="chooseOne(12)" value="D12"/>
+    <input type="button" onclick="chooseOne(20)" value="D20"/>
+    <script>
+
+    // select which dice to roll
+    function chooseOne(die) {
+
+      // Pick one at random
+      var which = Math.floor(Math.random() * die) + 1;
+      console.log('which' + which);
+
+      // Clear out the div, and then fill it with fresh
+      // This is the wonderful, invisible work of jQuery
+      $('#output').empty(); 
+      $('#output').append('<pre>' + /*result*/ which + '</pre>');
+    }
+  </script>
+<div id="output"></div>
+</body>
+</html>
