@@ -7,6 +7,7 @@
 
   <!-- Use jQuery from a CDN -->                      
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/chooseOne.js"></script>
 
     <title>Roll the Dice</title>
 </head>
@@ -21,18 +22,6 @@
     <input type="button" onclick="chooseOne(20)" value="D20"/>
     <script>
 
-    // select which dice to roll
-    function chooseOne(die) {
-
-      // Pick one at random
-      var which = Math.floor(Math.random() * die) + 1;
-      console.log('which' + which);
-
-      // Clear out the div, and then fill it with fresh
-      // This is the wonderful, invisible work of jQuery
-      $('#output').empty(); 
-      $('#output').append('<pre>' + /*result*/ which + '</pre>');
-    }
   </script>
 <div id="output"></div>
 </body>
